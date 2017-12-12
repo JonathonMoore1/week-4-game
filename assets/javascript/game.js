@@ -13,14 +13,14 @@ $(document).ready(function() {
 	function initializeGame() {
 
 		jewelValues = ["", "", "", ""];
-		getButtonVal = function(min, max) {
-			min = Math.ceil(1);
-			max = Math.floor(12);
+		getButtonVal = function() {
+			var min = 1;
+			var max = 12;
 			return Math.floor(Math.random() * (12 - 1)) + 1;
-			for (var i = 0; i < jewelValues.length; i++) {
+		};
+		for (var i = 0; i < jewelValues.length; i++) {
 				getButtonVal(jewelValues[i]);
 			};
-		};
 		wins = "";
 		losses = "";
 		ranNum = function(min, max) {
@@ -39,11 +39,23 @@ $(document).ready(function() {
 
 		$("#random-number").text(ranNum);
 
-		/*jewelValues.forEach(getButtonVal("") {
+		$("#wins #losses #total-score").empty();
+
+		/*$("#red-jewel").on("click", function() {
+
+		});
+
+		$("#blue-jewel").on("click", function() {
+
+		});
+
+		$("yellow-jewel").on("click", function() {
+
+		});
+
+		$("green-jewel").on("click", function() {
 
 		});*/
-
-		$("#wins #losses #total-score").empty();
 
 
 
