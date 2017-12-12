@@ -19,7 +19,7 @@ $(document).ready(function() {
 			return Math.floor(Math.random() * (12 - 1)) + 1;
 		};
 		for (var i = 0; i < jewelValues.length; i++) {
-				getButtonVal(jewelValues[i]);
+				jewelValues[i] = getButtonVal();	
 			};
 		wins = "";
 		losses = "";
@@ -33,9 +33,6 @@ $(document).ready(function() {
 		yellowJewel = jewelValues[2];
 		greenJewel = jewelValues[3];
 
-
-
-		getButtonVal();
 
 		$("#random-number").text(ranNum);
 
