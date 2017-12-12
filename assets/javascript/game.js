@@ -38,21 +38,22 @@ $(document).ready(function() {
 
 		$("#wins #losses #total-score").empty();
 
-		/*$("#red-jewel").on("click", function() {
 
+		$("#red-jewel").on("click", function() {
+			$("#total-score").text(redJewel).val();
 		});
 
 		$("#blue-jewel").on("click", function() {
-
+			$("#total-score").text(blueJewel).val();
 		});
 
-		$("yellow-jewel").on("click", function() {
-
+		$("#yellow-jewel").on("click", function() {
+			$("#total-score").text(yellowJewel).val();
 		});
 
-		$("green-jewel").on("click", function() {
-
-		});*/
+		$("#green-jewel").on("click", function() {
+			$("#total-score").text(greenJewel).val();
+		});
 
 
 
