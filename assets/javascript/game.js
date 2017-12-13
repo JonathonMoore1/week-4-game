@@ -9,6 +9,7 @@ $(document).ready(function() {
 	var ranNum;
 	var wins;
 	var losses;
+	var totalScore;
 
 	function initializeGame() {
 
@@ -28,6 +29,7 @@ $(document).ready(function() {
 			max = Math.floor(120);
 			return Math.floor(Math.random() * (120 - 19)) + 19;
 		};
+		totalScore = 0;
 		redJewel = jewelValues[0];
 		blueJewel = jewelValues[1];
 		yellowJewel = jewelValues[2];
@@ -40,19 +42,23 @@ $(document).ready(function() {
 
 
 		$("#red-jewel").on("click", function() {
-			$("#total-score").text(redJewel).val();
+			totalScore += redJewel;
+			$("#total-score").text(totalScore);
 		});
 
 		$("#blue-jewel").on("click", function() {
-			$("#total-score").text(blueJewel).val();
+			totalScore += blueJewel;
+			$("#total-score").text(totalScore);
 		});
 
 		$("#yellow-jewel").on("click", function() {
-			$("#total-score").text(yellowJewel).val();
+			totalScore += yellowJewel;
+			$("#total-score").text(totalScore);
 		});
 
 		$("#green-jewel").on("click", function() {
-			$("#total-score").text(greenJewel).val();
+			totalScore += greenJewel;
+			$("#total-score").text(totalScore);
 		});
 
 
