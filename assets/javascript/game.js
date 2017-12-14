@@ -22,8 +22,8 @@ $(document).ready(function() {
 		for (var i = 0; i < jewelValues.length; i++) {
 				jewelValues[i] = getButtonVal();	
 			};
-		wins = "";
-		losses = "";
+		wins = 0;
+		losses = 0;
 		ranNum = function(min, max) {
 			min = Math.ceil(19);
 			max = Math.floor(120);
@@ -61,8 +61,13 @@ $(document).ready(function() {
 			$("#total-score").text(totalScore);
 		});
 
+		ranNum = parseInt(ranNum);
 
-
+		if (totalScore === ranNum) {
+			wins++;
+			$("#wins").append("<strong>" + wins + "</strong>");
+			console.log("You won!");
+		};
 		
 
 	};
@@ -71,4 +76,5 @@ $(document).ready(function() {
 	initializeGame();
 	
 	console.log(jewelValues);
+	console.log(ranNum);
 });
